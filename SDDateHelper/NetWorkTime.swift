@@ -29,8 +29,6 @@ class NetworkTime {
 
 public class SDTime {
 
-  private var shareInstance = SDTime()
-
   public var now : Date {
     let activeTime = NetworkTime.shareInstance.activeTime
     let elapseTime = NetworkTime.shareInstance.stopwatch.elapsedTime
