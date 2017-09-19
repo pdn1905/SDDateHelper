@@ -27,10 +27,7 @@ class NetworkTime {
   var stopwatch = Stopwatch()
 }
 
-
-typealias DateCompletion = (Date) -> Void
-
- class SDTime {
+public class SDTime {
 
   private var shareInstance = SDTime()
 
@@ -49,7 +46,7 @@ typealias DateCompletion = (Date) -> Void
 
   fileprivate var hostIndex = 0
 
-  func getTime(with hostsName: [String],completion: @escaping DateCompletion) {
+  func getTime(with hostsName: [String],completion: @escaping (Date) -> Void) {
     guard hostIndex < hostsName.count else {
       completion(Date())
       return
@@ -65,7 +62,7 @@ typealias DateCompletion = (Date) -> Void
     }
   }
 
-  public func getNetworkTime(with hostsName: [String],completion: @escaping DateCompletion) {
+  public func getNetworkTime(with hostsName: [String],completion: @escaping (Date) -> Void) {
     self.getTime(with: hostsName) { (date) in
       self.hostIndex = 0
       NetworkTime.shareInstance.activeTime = date
@@ -74,7 +71,7 @@ typealias DateCompletion = (Date) -> Void
     }
   }
 
-  public func getNetworkTime(completion: @escaping DateCompletion) {
+  public func getNetworkTime(completion: @escaping (Date) -> Void) {
     self.getTime { (date) in
       self.hostIndex = 0
       NetworkTime.shareInstance.activeTime = date
@@ -83,7 +80,7 @@ typealias DateCompletion = (Date) -> Void
     }
   }
 
-  func getTime(completion: @escaping DateCompletion) {
+  func getTime(completion: @escaping (Date) -> Void) {
     guard hostIndex < HostsName.count else {
       completion(Date())
       return
