@@ -21,19 +21,10 @@ enum Port: UInt {
   case defaultPort = 123
 }
 
-public class NetworkTime {
-  fileprivate var shareInstance = NetworkTime()
+class NetworkTime {
+  fileprivate static let shareInstance = NetworkTime()
   var activeTime =  Date()
   var stopwatch = Stopwatch()
-
-  func saa() {
-
-    SDTime().getNetworkTime(with: ["time1.google.com","time2.google.com"]) { (date) in
-      print(date)
-    }
-
-    let now = SDTime().now
-  }
 }
 
 
@@ -44,19 +35,21 @@ typealias DateCompletion = (Date) -> Void
   private var shareInstance = SDTime()
 
   public var now : Date {
-    let activeTime = NetworkTime().shareInstance.activeTime
-    let elapseTime = NetworkTime().shareInstance.stopwatch.elapsedTime
+    let activeTime = NetworkTime.shareInstance.activeTime
+    let elapseTime = NetworkTime.shareInstance.stopwatch.elapsedTime
     return activeTime + elapseTime.second
   }
 
-
+  public init() {
+    //init
+  }
   fileprivate var HostsName: [String] {
     return [HostName.Pool1.rawValue,HostName.Pool2.rawValue,HostName.Pool3.rawValue,HostName.Pool4.rawValue]
   }
 
   fileprivate var hostIndex = 0
 
-  private func getTime(with hostsName: [String],completion: @escaping DateCompletion) {
+  func getTime(with hostsName: [String],completion: @escaping DateCompletion) {
     guard hostIndex < hostsName.count else {
       completion(Date())
       return
@@ -75,8 +68,8 @@ typealias DateCompletion = (Date) -> Void
   public func getNetworkTime(with hostsName: [String],completion: @escaping DateCompletion) {
     self.getTime(with: hostsName) { (date) in
       self.hostIndex = 0
-      NetworkTime().shareInstance.activeTime = date
-      NetworkTime().shareInstance.stopwatch = Stopwatch()
+      NetworkTime.shareInstance.activeTime = date
+      NetworkTime.shareInstance.stopwatch = Stopwatch()
       completion(date)
     }
   }
@@ -84,13 +77,13 @@ typealias DateCompletion = (Date) -> Void
   public func getNetworkTime(completion: @escaping DateCompletion) {
     self.getTime { (date) in
       self.hostIndex = 0
-      NetworkTime().shareInstance.activeTime = date
-      NetworkTime().shareInstance.stopwatch = Stopwatch()
+      NetworkTime.shareInstance.activeTime = date
+      NetworkTime.shareInstance.stopwatch = Stopwatch()
       completion(date)
     }
   }
 
-  private func getTime(completion: @escaping DateCompletion) {
+  func getTime(completion: @escaping DateCompletion) {
     guard hostIndex < HostsName.count else {
       completion(Date())
       return
