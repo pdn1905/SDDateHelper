@@ -21,12 +21,12 @@ pod 'SDDateHelper', :git => https://github.com/pdn1905/SDDateHelper
 ```
 How to use:
 ```ruby
-Import SMDDateHelper
+Import SDDateHelper
 ```
 
 Math with Date:
 ```ruby
-let today = Date() // 21-09-2017
+let today = Date() // 21-09-2017 📅
 let nextDay = today + 1.day => 22-09-2017 // same with minutes, hours, months, years..
 ```
 Compare between Dates:
@@ -35,14 +35,25 @@ let today = Date() // 21-09-2017
 let nextDay = today + 1.day => 22-09-2017 
 let bool = today < nextDay => return true
 ```
-Get Internet time:
+Get Network time (if failed return device time):
 
 ```ruby
-SDTime.getNextworkTime()
+SDTime().getNetworkTime { (date) in
+    print(date) => return sync network time.
+}
+```
+Custom services:
 
-let currentInternetTime = SDTime().now => return current network Time
+```ruby
+SDTime().getNetworkTime(with: ["time1.google.com","time2.google.com"]) { (date) in
+  print(date) => return sync network time.
+}
 ```
 
+```ruby
+  let now = SDTime().now => sync network time.
+```
+## From Ngoc With Love.
 ## Author
 
 NgocPhan😻, ngoc.phan@smartdev.vn

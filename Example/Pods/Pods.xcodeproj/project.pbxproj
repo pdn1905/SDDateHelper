@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0064897C74C317151B3308DA8C556BA8 /* Quick-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDB4DE10B3BB22CED3530034D71D382 /* Quick-dummy.m */; };
 		041CBDC01F74F22000C38CBB /* SDDateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CBDBE1F74F21700C38CBB /* SDDateHelper.swift */; };
+		041CBDCB1F74FF7C00C38CBB /* NetWorkTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CBDC71F74FF7900C38CBB /* NetWorkTime.swift */; };
+		041CBDCC1F74FF8500C38CBB /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CBDC81F74FF7900C38CBB /* Stopwatch.swift */; };
 		047A68C646E00EB6D7D4D7343B801D09 /* AdapterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2836B6F4B55404B511EAE1DC4128D11B /* AdapterProtocols.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		0626217FCE728972813C9832CB739D83 /* ExampleHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F9736AEE82C7EF6B1A305570DC8B66 /* ExampleHooks.swift */; };
 		07722FBCF6B380961B9D2832D5883F45 /* BeGreaterThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B661482C4BD687958053719426AD5D7 /* BeGreaterThan.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
@@ -174,6 +176,8 @@
 		03668E40925B3459C70C9E32C87CD797 /* SDDateHelper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDDateHelper-prefix.pch"; sourceTree = "<group>"; };
 		03AC41D8ACDF987857EED750D77DF8B8 /* World.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = World.swift; path = Sources/Quick/World.swift; sourceTree = "<group>"; };
 		041CBDBE1F74F21700C38CBB /* SDDateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SDDateHelper.swift; path = SDDateHelper/SDDateHelper.swift; sourceTree = "<group>"; };
+		041CBDC71F74FF7900C38CBB /* NetWorkTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetWorkTime.swift; path = SDDateHelper/NetWorkTime.swift; sourceTree = "<group>"; };
+		041CBDC81F74FF7900C38CBB /* Stopwatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stopwatch.swift; path = SDDateHelper/Stopwatch.swift; sourceTree = "<group>"; };
 		04A041CFC1E132F2A902DDC7CA54BC99 /* MatchError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MatchError.swift; path = Sources/Nimble/Matchers/MatchError.swift; sourceTree = "<group>"; };
 		0544E0307EF9550B65E886929DB3A98A /* NTPServer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NTPServer.m; path = NTPKit/NTPServer.m; sourceTree = "<group>"; };
 		05736F61AAA3CC5150DB2875659101EA /* NimbleXCTestHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NimbleXCTestHandler.swift; path = Sources/Nimble/Adapters/NimbleXCTestHandler.swift; sourceTree = "<group>"; };
@@ -592,6 +596,8 @@
 		C7015BD2222E0C386D734C06E22AD782 /* SDDateHelper */ = {
 			isa = PBXGroup;
 			children = (
+				041CBDC71F74FF7900C38CBB /* NetWorkTime.swift */,
+				041CBDC81F74FF7900C38CBB /* Stopwatch.swift */,
 				041CBDBE1F74F21700C38CBB /* SDDateHelper.swift */,
 				09EA49504658934FD4F8D56E3BD9CEA5 /* Support Files */,
 			);
@@ -889,7 +895,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				041CBDC01F74F22000C38CBB /* SDDateHelper.swift in Sources */,
+				041CBDCB1F74FF7C00C38CBB /* NetWorkTime.swift in Sources */,
 				617723E6CD1F9F46146A5EE092CA798D /* SDDateHelper-dummy.m in Sources */,
+				041CBDCC1F74FF8500C38CBB /* Stopwatch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
