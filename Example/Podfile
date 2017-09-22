@@ -2,7 +2,7 @@ use_frameworks!
 
 target 'SDDateHelper_Example' do
   pod 'SDDateHelper', :path => '../'
-
+  
   target 'SDDateHelper_Tests' do
     inherit! :search_paths
 

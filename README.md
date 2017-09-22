@@ -17,12 +17,35 @@ SDDateHelper is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'SDDateHelper'
+pod 'SDDateHelper', :git => https://github.com/pdn1905/SDDateHelper
+```
+How to use:
+```ruby
+Import SMDDateHelper
+```
+
+Math with Date:
+```ruby
+let today = Date() // 21-09-2017
+let nextDay = today + 1.day => 22-09-2017 // same with minutes, hours, months, years..
+```
+Compare between Dates:
+```ruby
+let today = Date() // 21-09-2017
+let nextDay = today + 1.day => 22-09-2017 
+let bool = today < nextDay => return true
+```
+Get Internet time:
+
+```ruby
+SDTime.getNextworkTime()
+
+let currentInternetTime = SDTime().now => return current network Time
 ```
 
 ## Author
 
-pdn1905, ngoc.phan@smartdev.vn
+NgocPhan😻, ngoc.phan@smartdev.vn
 
 ## License
 

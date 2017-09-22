@@ -1,0 +1,6 @@
+framework module NTPKit {
+  umbrella header "NTPKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

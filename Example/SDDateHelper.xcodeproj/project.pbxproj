@@ -28,7 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0E99FFFF0EA6E76773C586AB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		0E99FFFF0EA6E76773C586AB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		1DE3FE2835A0F2CAE2D3BEDD /* Pods-SDDateHelper_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDDateHelper_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SDDateHelper_Example/Pods-SDDateHelper_Example.release.xcconfig"; sourceTree = "<group>"; };
 		505B5AACC108DCF062B2F823 /* Pods_SDDateHelper_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDDateHelper_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A799C94A539CEDB7AD16829 /* Pods-SDDateHelper_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDDateHelper_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SDDateHelper_Tests/Pods-SDDateHelper_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -44,8 +44,8 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		68AF2FE7FC2846DD5A001D58 /* Pods_SDDateHelper_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDDateHelper_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		80BA3F52D7EAD8F2C04A1F50 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		840FB804DCD1AA0E403EAC45 /* SDDateHelper.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = SDDateHelper.podspec; path = ../SDDateHelper.podspec; sourceTree = "<group>"; };
+		80BA3F52D7EAD8F2C04A1F50 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		840FB804DCD1AA0E403EAC45 /* SDDateHelper.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SDDateHelper.podspec; path = ../SDDateHelper.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
 		C2C2297E419A2F85F7163B3C /* Pods-SDDateHelper_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDDateHelper_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SDDateHelper_Example/Pods-SDDateHelper_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -309,10 +309,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SDDateHelper_Example/Pods-SDDateHelper_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/NTPKit/NTPKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SDDateHelper/SDDateHelper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NTPKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDDateHelper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

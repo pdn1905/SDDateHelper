@@ -1,0 +1,6 @@
+framework module Pods_SDDateHelper_Example {
+  umbrella header "Pods-SDDateHelper_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
