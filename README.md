@@ -53,10 +53,9 @@ SDTime().getNetworkTime(with: ["time1.google.com","time2.google.com"]) { (date) 
 ```ruby
   let now = SDTime().now => sync network time.
 ```
-## From Ngoc With Love 😜.
 ## Author
 
-NgocPhan😻, ngoc.phan@smartdev.vn
+NgocPhan, ngoc.phan@smartdev.vn
 
 ## License
 
